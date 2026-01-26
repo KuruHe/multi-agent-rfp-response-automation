@@ -12,46 +12,11 @@ import {
   Activity,
   Pause,
   Loader2,
-  Globe,
-  Database,
-  DollarSign,
   ArrowRight,
   RefreshCw,
 } from "lucide-react";
 import { mockAgentStatus } from "@/lib/mock-data";
-
-const agentConfigs = {
-  sales: {
-    icon: Globe,
-    color: "text-info",
-    bgColor: "bg-info/10",
-    description: "Scans websites and portals to identify new RFPs and summarize requirements",
-    metrics: [
-      { label: "RFPs Scanned", key: "rfpsScanned" },
-      { label: "RFPs Identified", key: "rfpsIdentified" },
-    ],
-  },
-  technical: {
-    icon: Database,
-    color: "text-warning",
-    bgColor: "bg-warning/10",
-    description: "Matches RFP requirements with OEM product SKUs using RAG-based analysis",
-    metrics: [
-      { label: "Specs Matched", key: "specsMatched" },
-      { label: "Avg Match Score", key: "avgMatchScore", suffix: "%" },
-    ],
-  },
-  pricing: {
-    icon: DollarSign,
-    color: "text-success",
-    bgColor: "bg-success/10",
-    description: "Calculates pricing based on product costs and testing requirements",
-    metrics: [
-      { label: "Quotes Generated", key: "quotesGenerated" },
-      { label: "Avg Processing", key: "avgProcessingTime" },
-    ],
-  },
-};
+import { agentConfigs } from "@/lib/agent-configs";
 
 const statusConfig = {
   active: { label: "Active", color: "bg-success", icon: Activity },
