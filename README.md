@@ -432,6 +432,43 @@ copies or substantial portions of the Software.
 
 ---
 
+## 👥 Contributors
+
+<div style="display:flex;flex-wrap:wrap;gap:16px;">
+   <a href="https://github.com/calebjubal" style="text-decoration:none;color:inherit;">
+      <div style="border:1px solid #e5e7eb;border-radius:12px;padding:12px;width:140px;text-align:center;">
+         <img src="https://avatars.githubusercontent.com/u/85286527?s=96&v=4" alt="@calebjubal" width="64" height="64" style="border-radius:50%;" />
+         <div style="margin-top:8px;font-weight:600;">calebjubal</div>
+      </div>
+   </a>
+   <a href="https://github.com/KuruHe" style="text-decoration:none;color:inherit;">
+      <div style="border:1px solid #e5e7eb;border-radius:12px;padding:12px;width:140px;text-align:center;">
+         <img src="https://avatars.githubusercontent.com/u/165144197?s=96&v=4" alt="@KuruHe" width="64" height="64" style="border-radius:50%;" />
+         <div style="margin-top:8px;font-weight:600;">KuruHe</div>
+      </div>
+   </a>
+   <a href="https://github.com/Tharun-10Dragneel" style="text-decoration:none;color:inherit;">
+      <div style="border:1px solid #e5e7eb;border-radius:12px;padding:12px;width:140px;text-align:center;">
+         <img src="https://avatars.githubusercontent.com/u/165540181?s=96&v=4" alt="@Tharun-10Dragneel" width="64" height="64" style="border-radius:50%;" />
+         <div style="margin-top:8px;font-weight:600;">Tharun-10Dragneel</div>
+      </div>
+   </a>
+   <a href="https://github.com/bsahil01" style="text-decoration:none;color:inherit;">
+      <div style="border:1px solid #e5e7eb;border-radius:12px;padding:12px;width:140px;text-align:center;">
+         <img src="https://avatars.githubusercontent.com/u/179309113?s=96&v=4" alt="@bsahil01" width="64" height="64" style="border-radius:50%;" />
+         <div style="margin-top:8px;font-weight:600;">bsahil01</div>
+      </div>
+   </a>
+   <a href="https://github.com/mengyokyu" style="text-decoration:none;color:inherit;">
+      <div style="border:1px solid #e5e7eb;border-radius:12px;padding:12px;width:140px;text-align:center;">
+         <img src="https://avatars.githubusercontent.com/u/96583982?s=96&v=4" alt="@mengyokyu" width="64" height="64" style="border-radius:50%;" />
+         <div style="margin-top:8px;font-weight:600;">mengyokyu</div>
+      </div>
+   </a>
+</div>
+
+---
+
 ## 📈 Use Case
 
 **Industry**: B2B Technology/Product Distribution
@@ -449,12 +486,4 @@ This solution is designed for organizations with significant B2B RFP activity se
 <div align="center">
 
 **⭐ Star this repository if you find it helpful! **
-
-Made with ❤️ by Team:
-Caleb
-Tharundhatri
-Karan
-Kushagra
-Sahil
-
 </div>
