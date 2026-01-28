@@ -250,7 +250,8 @@ async def get_workflow_state(session_id: str):
 @app.delete("/api/chat/{session_id}")
 async def clear_session(session_id: str):
     """Clear chat session"""
-    return {"message": "Session cleared (LangGraph handles cleanup)", "session_id": session_id}
+    chat_sessions.pop(session_id, None)
+    return {"message": "Session cleared", "session_id": session_id}
 
 # ============================================================
 # RFP WORKFLOW APIs
