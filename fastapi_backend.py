@@ -245,7 +245,48 @@ async def get_chat_history(session_id: str):
 @app.get("/api/chat/state/{session_id}")
 async def get_workflow_state(session_id: str):
     """Get current workflow state (managed by LangGraph)"""
-    return {"message": "Workflow state managed by LangGraph checkpointer", "session_id": session_id}
+    state = chat_sessions.get(session_id)
+    if not state:
+        return {"session_id": session_id, "exists": False}
+
+    def get_rfp_id(rfp: Dict[str, Any]) -> str:
+        return rfp.get("id") or rfp.get("rfp_id", "")
+
+    rfps_identified = state.get("rfps_identified", []) or []
+    selected_rfp = state.get("selected_rfp")
+
+    rfps_summary = [
+        {
+            "id": get_rfp_id(r),
+            "title": r.get("title"),
+            "client": r.get("client"),
+            "estimated_value": r.get("estimated_value") or r.get("value"),
+            "submission_deadline": r.get("submission_deadline"),
+            "priority_score": r.get("priority_score"),
+        }
+        for r in rfps_identified
+        if isinstance(r, dict)
+    ]
+
+    selected_rfp_summary = None
+    if isinstance(selected_rfp, dict):
+        selected_rfp_summary = {
+            "id": get_rfp_id(selected_rfp),
+            "title": selected_rfp.get("title"),
+            "client": selected_rfp.get("client"),
+        }
+
+    return {
+        "session_id": session_id,
+        "exists": True,
+        "current_step": state.get("current_step"),
+        "next_node": state.get("next_node"),
+        "waiting_for_user": state.get("waiting_for_user", False),
+        "rfps_identified": rfps_summary,
+        "selected_rfp": selected_rfp_summary,
+        "report_url": state.get("report_url"),
+        "error": state.get("error"),
+    }
 
 @app.delete("/api/chat/{session_id}")
 async def clear_session(session_id: str):
