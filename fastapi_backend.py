@@ -89,6 +89,11 @@ async def health_check():
     }
 
 
+@app.get("/api/health")
+async def api_health_check():
+    return await health_check()
+
+
 @app.get("/api/reports/{session_id}/{rfp_id}")
 async def get_report(session_id: str, rfp_id: str):
     """Download generated RFP report PDF."""
